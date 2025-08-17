@@ -11,7 +11,7 @@ jobs:
     needs:
       - DEV
     steps:
-      - run: echo hello world
+      - run: echo hello worlds
 
   UAT:
     runs-on: ubuntu-latest
