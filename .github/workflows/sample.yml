@@ -8,15 +8,21 @@ jobs:
 
   QA:
     runs-on: ubuntu-latest
+    needs:
+      - DEV
     steps:
       - run: echo hello world
 
   UAT:
     runs-on: ubuntu-latest
+    needs:
+      - QA
     steps:
       - run: echo hello world
 
   PROD:
     runs-on: ubuntu-latest
+    needs:
+      - UAT
     steps:
       - run: echo hello world
